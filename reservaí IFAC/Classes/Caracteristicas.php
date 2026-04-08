@@ -2,55 +2,64 @@
     //Classe Caracteristicas
     class Caracteristicas {
         //Atributos
-        private $maxPessoas;
-        private $nomeEspaco;
-        private $descricaoEspaco;
+        private $id;
+        private $nome;
+        private $descricao;
+        private $quantidade;
 
-        //Método construtor
-        public function __construct ($maxPessoas, $nomeEspaco, $descricaoEspaco) {
-            $this->setMaxPessoas($maxPessoas);
-            $this->setNomeEspaco($nomeEspaco);
-            $this->setDescricaoEspaco($descricaoEspaco);
-        }//Fim do método construtor
+        //Métodos
+
+        //Método Construtor
+        public function __construct ($id, $nome, $descricao, $quantidade) {
+            $this->setId ($id);
+            $this->setNome ($nome);
+            $this->setDescricao ($descricao);
+            $this->setQuantidade ($quantidade);
+        }//Fim do Método Construtor
 
         //Método __destruct ()
         public function __destruct () {
         }//Fim do método __destruct ()
 
-        //Método setMaxPessoas ()
-        public function setMaxPessoas ($maxPessoas) {
-            if (is_numeric($maxPessoas) and $maxPessoas > 0) {
-                $this->maxPessoas = $maxPessoas;
-            }
-        }//Fim do método setMaxPessoas ()
+        //Método setId ()
+        public function setId ($id) {
+            $this->id = $id;
+        }//Fim do Método setId ()
 
-        //Método getMaxPessoas ()
-        public function getMaxPessoas () {
-            return $this->maxPessoas;
-        }//Fim do método getMaxPessoas ()
+        //Método getId ()
+        public function getId () {
+            return $this->id;
+        }//Fim do Método getID ()
 
-        //Método setNomeEspaco ()
-        public function setNomeEspaco ($nomeEspaco) {
-            if (is_string($nomeEspaco)) {
-                $this->nomeEspaco = $nomeEspaco;
-            }
-        }//Fim do método setNomeEspaco ()
+        //Método setNome ()
+        public function setNome ($nome) {
+            $this->nome = $nome;
+        }//Fim do Método setNome ()
 
-        //Método getNomeEspaco ()
-        public function getNomeEspaco () {
-            return $this->nomeEspaco;
-        }//Fim do método getNomeEspaco ()
+        //Método getNome ()
+        public function getNome () {
+            return $this->nome;
+        }//Fim do Método getNome ()
 
-        //Método setDescricaoEspaco ()
-        public function setDescricaoEspaco ($descricaoEspaco) {
-            if (is_string($descricaoEspaco)) {
-                $this->descricaoEspaco = $descricaoEspaco;
-            }
-        }//Fim do método setDescricaoEspaco ()
+        //Método setdescricao ()
+        public function setDescricao ($descricao) {
+            $this->descricao = $descricao;
+        }//Fim do Método setDescricao ()
 
-        //Método getDescricaoEspaco ()
-        public function getDescricaoEspaco () {
-            return $this->descricaoEspaco;
-        }//Fim do método getDescricaoEspaco ()
-    }
+        //Método getDescricao ()
+        public function getDescricao () {
+            return $this->descricao;
+        }//Fim do Método getDescricao ()
+
+        //Método setQuantidade ()
+        public function setQuantidade ($quantidade) {
+            $this->quantidade = $quantidade;
+        }//Fim do Método setQuantidade ()
+        
+        //Método getQuantidade ()
+        public function getQuantidade () {
+            return $this->quantidade;
+        }//Fim do Método getQuantidade ()
+
+    }//Fim da Classe Caracteristicas
 ?>
