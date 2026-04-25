@@ -3,9 +3,8 @@ Classes
 
 
 \- Condicao(idCondicao, estadoConservacao, observacaoGeral, dataUltimaVistoria);
-CAIO GAY
 
-\- Espaço(maxPessoas, nomeEspaco, descricaoEspaco, **inventario**, **condicao**)
+\- Espaço(maxPessoas, nomeEspaco, descricaoEspaco, **inventario**, **condicao**);
 
 \- Inventario(idItem, nomeItem, quantidadeItem, descricaoItem, **espaco**);
 
