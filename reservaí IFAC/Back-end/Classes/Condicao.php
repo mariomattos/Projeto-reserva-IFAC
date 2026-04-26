@@ -2,7 +2,6 @@
     //Classe Condicao
     class Condicao {
         //Atributos
-        private $idCondicao;
         private $estadoConservacao;
         private $observacaoGeral;
         private $dataUltimaVistoria;
@@ -10,8 +9,7 @@
         //Métodos
 
         //Método construtor
-        public function __construct ($idCondicao, $estadoConservacao, $observacaoGeral, $dataUltimaVistoria) {
-            $this->setIdCondicao($idCondicao);
+        public function __construct ($estadoConservacao, $observacaoGeral, $dataUltimaVistoria) {
             $this->setEstadoConservacao($estadoConservacao);
             $this->setObservacaoGeral($observacaoGeral);
             $this->setDataUltimaVistoria($dataUltimaVistoria);
@@ -20,16 +18,6 @@
         //Método __destruct ()
         public function __destruct () {
         }//Fim do método __destruct ()
-
-        //Método setIdCondicao ()
-        public function setIdCondicao ($idCondicao) {
-            $this->idCondicao = $idCondicao;
-        }//Fim do método setIdCondicao ()
-
-        //Método getIdCondicao ()
-        public function getIdCondicao () {
-            return $this->idCondicao;
-        }//Fim do método getIdCondicao ()
 
         //Método setEstadoConservacao ()
         public function setEstadoConservacao ($estadoConservacao) {
