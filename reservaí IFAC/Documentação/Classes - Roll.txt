@@ -3,7 +3,7 @@
 //A chave primária de cada classe está entre dois asteriscos.
 
 
-Características(*idCaracteristicas*, nome, descricao, quantidade);
+Caracteristicas(*idCaracteristicas*, nome, descricao, quantidade);
 
 Condicao(*idCondicao*, estadoConservacao, observacaoGeral, dataUltimaVistoria);
 
@@ -13,7 +13,7 @@ Inventario(*idInventario*, item);
 
 Item (*idItem*, condicao, caracteristica);
 
-Manutenção(*idManutencao*, dataInicio, dataFimPrevista, tecnicoResponsavel);
+Manutencao(*idManutencao*, dataInicio, dataFimPrevista, tecnicoResponsavel);
 
 Reserva(*idReserva*, horarioReserva, espaco, usuario);
 
