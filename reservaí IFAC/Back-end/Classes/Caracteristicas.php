@@ -2,7 +2,6 @@
     //Classe Caracteristicas
     class Caracteristicas {
         //Atributos
-        private $idCaracteristicas;
         private $nome;
         private $descricao;
         private $quantidade;
@@ -10,8 +9,7 @@
         //Métodos
 
         //Método Construtor
-        public function __construct ($idCaracteristicas, $nome, $descricao, $quantidade) {
-            $this->setIdCaracteristicas ($idCaracteristicas);
+        public function __construct ($nome, $descricao, $quantidade) {
             $this->setNome ($nome);
             $this->setDescricao ($descricao);
             $this->setQuantidade ($quantidade);
@@ -20,16 +18,6 @@
         //Método __destruct ()
         public function __destruct () {
         }//Fim do método __destruct ()
-
-        //Método setIdCaracteristicas ()
-        public function setIdCaracteristicas ($idCaracteristicas) {
-            $this->idCaracteristicas = $idCaracteristicas;
-        }//Fim do Método setIdCaracteristicas ()
-
-        //Método getIdCaracteristicas ()
-        public function getIdCaracteristicas () {
-            return $this->idCaracteristicas;
-        }//Fim do Método getIdCaracteristicas ()
 
         //Método setNome ()
         public function setNome ($nome) {
