@@ -3,9 +3,9 @@
 //A chave primária de cada classe está entre dois asteriscos.
 
 
-Caracteristicas(*idCaracteristicas*, nome, descricao, quantidade);
+Caracteristicas(nome, descricao, quantidade);
 
-Condicao(*idCondicao*, estadoConservacao, observacaoGeral, dataUltimaVistoria);
+Condicao(estadoConservacao, observacaoGeral, dataUltimaVistoria);
 
 Espaco(*idEspaco*, inventario, condicao, caracteristicas);
 
