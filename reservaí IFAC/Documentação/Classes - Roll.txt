@@ -13,25 +13,27 @@ Item {($condicao, $caracteristicas)}
 
 Reserva {(*$idReserva*, $horarioReserva, $espaco, $usuario)}
 
-super Usuario {(*$matricula*, $cpfUsuario, $dataNascimentoUsuario, $caracteristicas)
+super Usuario {(*$matricula*, $cpfUsuario, $dataNascimentoUsuario, $senhaUsuario, $senhaEmail, $caracteristicas)
     sub Administrador ($numeroDeAcesso);
     sub Aluno ($nivelDeEnsino);
     sub Professor ($disciplina);
 }
 
 ----- Relacionamentos -----
+
 Associação:
----//---
+Item - Inventario (Inventário existe sem Item, item existe sem invetário);
+
 
 Composição:
-Espaco - Caracteristicas (Espaco->todo, Caracteristicas->parte);
-Item - Caracteristicas (Item->todo, Caracteristicas->parte);
-Usuario - Caracteristica (Usuario->todo, Caracteristica->parte);
-Espaco - Inventario (Espaco->todo, Inventario->parte);
+Espaco - Caracteristicas (Espaço não existe sem características, e características não existe sem espaco);
+Item - Caracteristicas (Item não existe sem características, e característica não existe sem usuário);
+Usuario - Caracteristica (Usuário não existe sem características, e características não existe sem usuário);
+
 
 Agregação:
-Item - Inventario (Inventario não existe sem Item);
-Reserva - Usuario (Reserva->todo, Usuario->parte);
-Reserva - Espaco (Reserva->todo, Espaco->parte);
+Reserva - Usuario (Reserva não existe sem usuário, mas usuário existe sem reserva);
+Reserva - Espaco (Reserva não existe sem espaço, mas espaço existe sem reserva);
+Espaco - Inventario (Espaço existe sem inventário, mas inventário não existe sem espaço);
 
 senha do banco de dados supabase: reservaí IFAC
