@@ -4,7 +4,6 @@
         //Atributos
         private $idEspaco;
         private $condicao;
-        private $inventario; //Composição
         private $caracteristicas; //Composição
 
         //Métodos
@@ -15,10 +14,6 @@
             $this->setCondicao($condicao);
             $this->caracteristicas = array();
         }//Fim do método construtor
-
-        //Método __destruct ()
-        public function __destruct () {
-        }//Fim do método __destruct ()
 
         //Método setIdEspaco ()
         public function setIdEspaco ($idEspaco) {
@@ -39,17 +34,6 @@
         public function getCondicao () {
             return $this->condicao;
         }//Fim do método getCondicao ()
-
-        //Método setInventario ()
-        public function setInventario (Inventario $i) {
-            //Passando a referência do objeto i
-            $this->inventario = $i;
-        }//Fim do método setInventario ()
-
-        //Método getInventario ()
-        public function getInventario () {
-            return $this->inventario;
-        }//Fim do método getInventario ()
 
         //Método addCaracteristicas ()
         public function addCaracteristicas($nome, $descricao, $quantidade) {

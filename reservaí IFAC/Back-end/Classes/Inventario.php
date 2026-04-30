@@ -2,7 +2,7 @@
     //Classe Inventario
     class Inventario {
         //Atributos
-        private $item; //Agregação
+        private $item; //Composição
 
         //Método construtor
         public function __construct() {
@@ -10,8 +10,8 @@
         }
 
         //Método addItem ()
-        public function addItem (Item $i) {
-            $this->item[] = $i;
+        public function addItem ($idItem) {
+            $this->item[] = new Item($idItem);
         }//Fim do método addItem ()
 
         public function getItem () {

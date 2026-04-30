@@ -15,10 +15,6 @@
             $this->setQuantidade ($quantidade);
         }//Fim do Método Construtor
 
-        //Método __destruct ()
-        public function __destruct () {
-        }//Fim do método __destruct ()
-
         //Método setNome ()
         public function setNome ($nome) {
             $this->nome = $nome;

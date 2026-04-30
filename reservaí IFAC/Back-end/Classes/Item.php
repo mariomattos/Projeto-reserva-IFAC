@@ -2,30 +2,25 @@
     //Classe Item
     class Item {
         //Atributos
-        private $condicao;
+        private $idItem;
         private $caracteristicas; //Composição
-
         //Métodos
 
         //Método construtor
-        public function __construct ($condicao) {
-            $this->setCondicao ($condicao);
+        public function __construct ($idItem) {
+            $this->setIdItem($idItem);
             $this->caracteristicas = array();
         }//Fim do método construtor
 
-        //Método __destruct ()
-        public function __destruct () {
-        }//Fim do método __destruct ()
+        //Método setIdItem()
+        public function setIdItem ($idItem) {
+            $this->idItem = $idItem;
+        }//Fim do método setIdItem()
 
-        //Método setCondicao ()
-        public function setCondicao ($condicao) {
-            $this->condicao = $condicao;
-        }//Fim do método setCondicao ()
-
-        //Método getCondicao ()
-        public function getCondicao () {
-            return $this->condicao;
-        }//Fim do método getCondicao ()
+        //Método getIdItem()
+        public function getIdItem () {
+            return $this->idItem;
+        }
 
         //Método addCaracteristicas ()
         public function addCaracteristicas($nome, $descricao, $quantidade) {

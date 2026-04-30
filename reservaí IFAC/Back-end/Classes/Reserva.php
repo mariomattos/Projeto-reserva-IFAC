@@ -4,8 +4,8 @@
         //Atributos
         private $idReserva;
         private $horarioReserva;
-        private $espaco; //Agregação
-        private $usuario; //Agregação
+        private $dataReserva;
+        private $usuario; //Associação
 
         //Métodos
 
@@ -14,10 +14,6 @@
             $this->setIdReserva ($idReserva);
             $this->setHorarioReserva ($horarioReserva);
         }//Fim do método construtor
-
-        //Método __destruct ()
-        public function __destruct () {
-        }//Fim do método __destruct ()
 
         //Método setIdReserva ()
         public function setIdReserva ($idReserva) {
@@ -39,22 +35,21 @@
             return $this->horarioReserva;
         }//Fim do método getHorarioReserva ()
 
-        //Método setEspaco ()
-        public function setEspaco (Espaco $e) {
-        //Passando a referência do objeto e
-            $this->espaco = $e;
-        }//Fim do método setEspaco ()
-
-        //Método getEspaco ()
-        public function getEspaco () {
-            return $this->espaco;
-        }//Fim do método getEspaco ()
-
         //Método setUsuario ()
         public function setUsuario (Usuario $u) {
         //Passando a referência do objeto u
             $this->usuario = $u;
         }//Fim do método setUsuario ()
+
+        //Método setDataReserva ()
+        public function setDataReserva ($dataReserva) {
+            $this->dataReserva = $dataReserva;
+        }//Fim do método setDataReserva ()
+
+        //Método getDataReserva ()
+        public function getDataReserva () {
+            return $this->dataReserva;
+        }//Fim do método getDataReserva ()
 
         //Método getUsuario ()
         public function getUsuario () {

@@ -1,17 +1,17 @@
------ Classes -----
+========== Classes ========== 
 
 //A chave primária de cada classe está entre dois asteriscos.
 
 
 Caracteristicas {($nome, $descricao, $quantidade)}
 
-Espaco {(*$idEspaco*, $inventario, $condicao, $caracteristicas)}
+Espaco {(*$idEspaco*, $condicao, $caracteristicas)}
 
 Inventario {($item)}
 
-Item {($condicao, $caracteristicas)}
+Item {(*$idItem*, $caracteristicas)}
 
-Reserva {(*$idReserva*, $horarioReserva, $espaco, $usuario)}
+Reserva {(*$idReserva*, $horarioReserva, $dataReserva, $usuario)}
 
 super Usuario {(*$matricula*, $cpfUsuario, $dataNascimentoUsuario, $senhaUsuario, $senhaEmail, $caracteristicas)
     sub Administrador ($numeroDeAcesso);
@@ -19,21 +19,28 @@ super Usuario {(*$matricula*, $cpfUsuario, $dataNascimentoUsuario, $senhaUsuario
     sub Professor ($disciplina);
 }
 
------ Relacionamentos -----
+========== Relacionamentos ===========
 
-Associação:
-Item - Inventario (Inventário existe sem Item, item existe sem invetário);
+--- Associação ---
+Usuario - Reserva (Usuário e reserva existem independentemente um do outro);
 
 
-Composição:
+--- Composição ---
 Espaco - Caracteristicas (Espaço não existe sem características, e características não existe sem espaco);
 Item - Caracteristicas (Item não existe sem características, e característica não existe sem usuário);
-Usuario - Caracteristica (Usuário não existe sem características, e características não existe sem usuário);
+Usuario - Caracteristicas (Usuário não existe sem características, e características não existe sem usuário);
+Inventario - Item (Inventario não existe sem item, e Item é criado dentro do Inventario)
 
 
-Agregação:
-Reserva - Usuario (Reserva não existe sem usuário, mas usuário existe sem reserva);
-Reserva - Espaco (Reserva não existe sem espaço, mas espaço existe sem reserva);
-Espaco - Inventario (Espaço existe sem inventário, mas inventário não existe sem espaço);
+--- Agregação ---
+Espaco - Reserva (Espaço existe sem reservas, e várias reservas agregam espaço);
+Espaco - Item (Espaco existe sem item, e varios iten agregam o espaço);
 
-senha do banco de dados supabase: reservaí IFAC
+
+========== Exemplos ===========
+
+Associação - Fabricante existe sem celular existir, celular existe sem fabricante existir.
+
+Composição - Características não existe sem usuário.
+
+Agregação - Um local armazena vários objetos da mesma classe, porém não depende desses objetos pra existir.
