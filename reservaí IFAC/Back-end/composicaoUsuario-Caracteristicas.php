@@ -4,15 +4,16 @@
     require_once 'Classes/Usuario.php';
 
     //Criaçao do Objeto
-    $u1 = new Usuario ('20251CRB45810510052', '02065107219', '21/09/2009');
+    $u1 = new Usuario ('20251CRB45810510000', '123.456.789-00', '12/07/1981', 'breno.silveira@ifac.edu.br', '****');
     //Composiçao
-    $u1->addCaracteristicas('1', 'Matheus', '1', '1303');
+    $u1->addCaracteristicas('Breno Carrillo Silveira', '', '');
 
     foreach ($u1->getCaracteristicas() as $c) {
-        print 'Caracteristicas do usuario: <br> Nome:' . $c->getNome() . '<br> Quantidade:' . $c->getQuantidade() . '<br>';
+        print 'Dados do usuário: <br><br> Nome: ' . $c->getNome() . '<br>';
     }
 
-    echo 'Matrícula: ' . $u1->getMatriculaUsuario() . '<br>';
+    echo 'Matrícula: ' . $u1->getMatricula() . '<br>';
     echo 'CPF: ' . $u1->getCpfUsuario() . '<br>';
     echo 'Nascimento: ' . $u1->getDataNascimentoUsuario() . '<br>';
+    echo 'E-mail: ' . $u1->getEmailUsuario() . '<br>';
 ?>
