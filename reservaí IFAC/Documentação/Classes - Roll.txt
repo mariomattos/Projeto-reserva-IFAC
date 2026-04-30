@@ -5,13 +5,13 @@
 
 Caracteristicas {($nome, $descricao, $quantidade)}
 
-Espaco {(*$idEspaco*, $inventario, $condicao, $caracteristicas)}
+Espaco {(*$idEspaco*, $condicao, $caracteristicas)}
 
 Inventario {($item)}
 
 Item {(*$idItem*, $caracteristicas)}
 
-Reserva {(*$idReserva*, $horarioReserva, $espaco, $usuario)}
+Reserva {(*$idReserva*, $horarioReserva, $dataReserva, $usuario)}
 
 super Usuario {(*$matricula*, $cpfUsuario, $dataNascimentoUsuario, $senhaUsuario, $senhaEmail, $caracteristicas)
     sub Administrador ($numeroDeAcesso);

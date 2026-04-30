@@ -4,6 +4,7 @@
         //Atributos
         private $idReserva;
         private $horarioReserva;
+        private $dataReserva;
         private $usuario; //Associação
 
         //Métodos
@@ -39,6 +40,16 @@
         //Passando a referência do objeto u
             $this->usuario = $u;
         }//Fim do método setUsuario ()
+
+        //Método setDataReserva ()
+        public function setDataReserva ($dataReserva) {
+            $this->dataReserva = $dataReserva;
+        }//Fim do método setDataReserva ()
+
+        //Método getDataReserva ()
+        public function getDataReserva () {
+            return $this->dataReserva;
+        }//Fim do método getDataReserva ()
 
         //Método getUsuario ()
         public function getUsuario () {
