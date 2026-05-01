@@ -4,6 +4,9 @@
         //Atributos
         private $idEspaco;
         private $condicao;
+        //Referência de memória
+        private $reservas; //Agregação
+        private $item; //Agregação
         private $caracteristicas; //Composição
 
         //Métodos
@@ -13,6 +16,8 @@
             $this->setIdEspaco($idEspaco);
             $this->setCondicao($condicao);
             $this->caracteristicas = array();
+            $this->reservas = array();
+            $this->item = array();
         }//Fim do método construtor
 
         //Método setIdEspaco ()
@@ -34,6 +39,27 @@
         public function getCondicao () {
             return $this->condicao;
         }//Fim do método getCondicao ()
+
+        //Método addReserva ()
+        public function addReserva(Reserva $r) {
+            //Passando a referência do objeto r
+            $this->reservas[] = $r;
+        }//Fim do método addReserva()
+
+        //Método getReservas ()
+        public function getReservas () {
+            return $this->reservas;
+        }//Fim do método getReservas ()
+
+        public function addItem (Item $i) {
+            //Passando a referência do objeto r
+            $this->itens[] = $i;
+        }//Fim do método addReserva()
+
+        //Método getItem ()
+        public function getItem () {
+            return $this->itens;
+        }//Fim do método getItem ()
 
         //Método addCaracteristicas ()
         public function addCaracteristicas($nome, $descricao, $quantidade) {
