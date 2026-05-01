@@ -5,14 +5,16 @@
         private $idReserva;
         private $horarioReserva;
         private $dataReserva;
+        //Referência de memória
         private $usuario; //Associação
 
         //Métodos
 
         //Método construtor
-        public function __construct ($idReserva, $horarioReserva) {
+        public function __construct ($idReserva, $horarioReserva, $dataReserva) {
             $this->setIdReserva ($idReserva);
             $this->setHorarioReserva ($horarioReserva);
+            $this->setDataReserva ($dataReserva);
         }//Fim do método construtor
 
         //Método setIdReserva ()
@@ -41,6 +43,11 @@
             $this->usuario = $u;
         }//Fim do método setUsuario ()
 
+        //Método getUsuario ()
+        public function getUsuario () {
+            return $this->usuario;
+        }//Fim do método getUsuario ()
+
         //Método setDataReserva ()
         public function setDataReserva ($dataReserva) {
             $this->dataReserva = $dataReserva;
@@ -50,10 +57,5 @@
         public function getDataReserva () {
             return $this->dataReserva;
         }//Fim do método getDataReserva ()
-
-        //Método getUsuario ()
-        public function getUsuario () {
-            return $this->usuario;
-        }//Fim do método getUsuario ()
     }//Fim da classe Reserva
 ?>
