@@ -7,9 +7,9 @@
     $e1 = new Espaco (1, "Disponível");
 
     //Agregação das reservas no espaço
-    $e1->addReserva($r1 = new Reserva (1, "13:30", "04/05/2026"));
-    $e1->addReserva($r1 = new Reserva (2, "15:30", "04/05/2026"));
-    $e1->addReserva($r1 = new Reserva (3, "16:20", "04/05/2026"));
+    $e1->addReservas($r1 = new Reserva (1, "13:30", "04/05/2026"));
+    $e1->addReservas($r1 = new Reserva (2, "15:30", "05/05/2026"));
+    $e1->addReservas($r1 = new Reserva (3, "16:20", "06/05/2026"));
 
     //Exibição dos dados
     echo "ID do espaço: " . $e1->getIdEspaco() . "<br>";
